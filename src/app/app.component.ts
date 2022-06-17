@@ -20,13 +20,9 @@ export class AppComponent {
         console.log(event.urlAfterRedirects);
         gtag('config', 'G-P61F7JWBGT', {'page_path': event.urlAfterRedirects});
         gtag("set", "user_properties", {
-          user_id: "111111111",
-        });
-        gtag("set", "user_properties", {
-          name: "Nestor Sanchez",
-        });
-        gtag("set", "user_properties", {
-          email: "nestor@gmail.com",
+          'user_id': "111111111",
+          'name': "Nestor Sanchez",
+          'email': "nestor@gmail.com",
         });
       }
     })
@@ -34,13 +30,9 @@ export class AppComponent {
 
   setUser() {
     gtag("set", "user_properties", {
-      user_id: "1212121",
-    });
-    gtag("set", "user_properties", {
-      name: "Boris Lopez",
-    });
-    gtag("set", "user_properties", {
-      email: "boris@gmail.com",
+      'user_id': "1212121",
+      'name': "Boris Lopez",
+      'email': "boris@gmail.com",
     });
   }
 }
