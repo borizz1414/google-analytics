@@ -13,7 +13,8 @@
       }
       gtag("js", new Date());
       gtag("config", "G-P61F7JWBGT");
-      setTimeout(() => {
+
+      function setUser() {
         gtag("set", "user_properties", {
           user_id: "1212121",
         });
@@ -23,10 +24,10 @@
         gtag("set", "user_properties", {
           email: "boris@gmail.com",
         });
-      }, 10000);
+      }
 
       gtag("set", "user_properties", {
-        user_id: "3434343",
+        user_id: "111111111",
       });
       gtag("set", "user_properties", {
         name: "Nestor Sanchez",
