@@ -22,5 +22,6 @@ export class GoogleAnalyticsService {
       eventAction: eventAction,
       eventValue: eventValue
     })
+    gtag('set', 'userId', 223232);
   }
 }
