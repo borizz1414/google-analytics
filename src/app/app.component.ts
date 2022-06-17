@@ -18,8 +18,29 @@ export class AppComponent {
       if(event instanceof NavigationEnd){
 
         console.log(event.urlAfterRedirects);
-        gtag('config', 'G-P61F7JWBGT', {'page_path': event.urlAfterRedirects, user_id: 232323, name: 'Nestor Sanchez', email:'nestor@gmail.com'});
+        gtag('config', 'G-P61F7JWBGT', {'page_path': event.urlAfterRedirects});
+        gtag("set", "user_properties", {
+          user_id: "111111111",
+        });
+        gtag("set", "user_properties", {
+          name: "Nestor Sanchez",
+        });
+        gtag("set", "user_properties", {
+          email: "nestor@gmail.com",
+        });
       }
     })
+  }
+
+  setUser() {
+    gtag("set", "user_properties", {
+      user_id: "1212121",
+    });
+    gtag("set", "user_properties", {
+      name: "Boris Lopez",
+    });
+    gtag("set", "user_properties", {
+      email: "boris@gmail.com",
+    });
   }
 }
