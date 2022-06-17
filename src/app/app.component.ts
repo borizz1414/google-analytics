@@ -18,7 +18,7 @@ export class AppComponent {
       if(event instanceof NavigationEnd){
 
         console.log(event.urlAfterRedirects);
-        gtag('config', 'G-P61F7JWBGT', {'page_path': event.urlAfterRedirects});
+        gtag('config', 'G-P61F7JWBGT', {'page_path': event.urlAfterRedirects, 'user_id': '232323'});
       }
     })
   }
