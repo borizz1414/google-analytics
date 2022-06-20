@@ -11,7 +11,9 @@ declare let gtag: Function;
 })
 export class AppComponent {
   title = 'angularGoogleAnalytics';
-
+  name: string;
+  id: number;
+  email: string;
   constructor(public router: Router){
 
     this.router.events.subscribe(event => {
@@ -19,20 +21,20 @@ export class AppComponent {
 
         console.log(event.urlAfterRedirects);
         gtag('config', 'G-P61F7JWBGT', {'page_path': event.urlAfterRedirects});
-        gtag("set", "user_properties", {
-          'user_id': "111111111",
-          'name': "Nestor Sanchez",
-          'email': "nestor@gmail.com",
-        });
+        // gtag("set", "user_properties", {
+        //   'user_id': "111111111",
+        //   'name': "Nestor Sanchez",
+        //   'email': "nestor@gmail.com",
+        // });
       }
     })
   }
 
   setUser() {
     gtag("set", "user_properties", {
-      'user_id': "1212121",
-      'name': "Boris Lopez",
-      'email': "boris@gmail.com",
+      'user_id': this.id,
+      'name': this.name,
+      'email': this.email,
     });
   }
 }

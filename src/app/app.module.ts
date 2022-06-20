@@ -8,6 +8,7 @@ import { RouterModule, Routes} from '@angular/router';
 import { ShopComponent } from './shop/shop.component';
 
 import {GoogleAnalyticsService} from './services/google-analytics.service';
+import { FormsModule } from '@angular/forms';
 
 export const appRoutes: Routes = [
   {path: '', component:HomeComponent},
@@ -24,6 +25,7 @@ export const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot(appRoutes,{useHash:true})
   ],
   providers: [GoogleAnalyticsService],

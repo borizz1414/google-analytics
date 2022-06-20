@@ -5,8 +5,15 @@
         <li><a routerLink="/about">About</a></li>
         <li><a routerLink="/shop">Shop</a></li>
         <li> <button (click)="setUser()">Set user</button></li>
+        <li> </li>
+
         </ul>
     </div>
 </nav>
-            
+<label for="">name</label>
+<input type="text" [(ngModel)]="name"> <br>
+<label for="">email</label>
+<input type="text" [(ngModel)]="email"> <br>
+<label for="">id</label>
+<input type="number" [(ngModel)]="id"> <br>
 <router-outlet></router-outlet>
