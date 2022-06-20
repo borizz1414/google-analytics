@@ -22,19 +22,12 @@ export class AppComponent {
   setUser() {
     this.router.events.subscribe(event => {
       if(event instanceof NavigationEnd){
-
-        console.log(event.urlAfterRedirects);
-        gtag('config', 'G-P61F7JWBGT', {'page_path': event.urlAfterRedirects});
+        gtag('config', 'G-P61F7JWBGT', {'page_path': event.urlAfterRedirects, 'user_id':this.id});
         gtag("set", "user_properties", {
-          'user_id': this.id,
+          'metises-user-id': this.id,
           'name': this.name,
           'email': this.email,
         });
-        // gtag("set", "user_properties", {
-        //   'user_id': "111111111",
-        //   'name': "Nestor Sanchez",
-        //   'email': "nestor@gmail.com",
-        // });
       }
     })
   
