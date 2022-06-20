@@ -24,7 +24,7 @@ export class AppComponent {
       if(event instanceof NavigationEnd){
         gtag('config', 'G-P61F7JWBGT', {'page_path': event.urlAfterRedirects, 'user_id':this.id});
         gtag("set", "user_properties", {
-          'metises-user-id': this.id,
+          'metises_user_id': this.id,
           'name': this.name,
           'email': this.email,
         });
